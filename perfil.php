@@ -117,7 +117,10 @@
 
 				if(isset($_FILES['imagem']))
 				{
+					if(isset($_GET['nf']))
+					{
 
+					}
 					$imagem = $_FILES["imagem"];
 					$extensao=strtolower(substr($_FILES['imagem'] ['name'], -4));
 					$novo_nome= rand("10000", "90000") . $extensao;
@@ -125,9 +128,10 @@
 					move_uploaded_file($_FILES['imagem']['tmp_name'], $diretorio.$novo_nome);
 					$sq="UPDATE usuarios SET arquivo='$novo_nome' WHERE id='$id_p'";
 					$co=mysqli_query($con, $sq);
-					header("location:perfil.php");
-					print $novo_nome;
-
+					$msg="Imagem Atualizada com sucesso!";
+					//header("location:perfil.php?nf='$msg'");
+					//print $novo_nome;
+					
 
 				}	
 

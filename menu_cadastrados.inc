@@ -3,9 +3,16 @@
 <head>
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="menu_cadastrados.css">
+	
 </head>
 <body>
 	<style type="text/css">
+		@font-face
+			{
+				font-family: font_titulo;
+				src:url('fontes/Bangers-Regular.ttf');
+
+			}
 		a:link {
 			text-decoration:none;
 		}
@@ -18,19 +25,22 @@
     color: #999999;
 }
 		#menu{position: fixed; top: 0px; width:100%; height:15%; background-color:#9e2a2a; z-index: 24;}
-		.icon1{position: fixed; top: 10px; left: 1000px; width:40px; height:40px; z-index: 24; border-radius: 50%;}
-		.icon2{position: fixed; top: 0px;left: 1000px;width:60px; height:50px; z-index: 24; border-radius: 50%}
-		.user{position: fixed; top: 50px; z-index: 24; font-family: verdana; left: 1000px; }
+		.icon1{position: fixed; top: 10px; left: 1050px; width:40px; height:40px; z-index: 24; border-radius: 50%;}
+		.icon2{position: fixed; top: 0px;left: 1050px;width:60px; height:50px; z-index: 24; border-radius: 50%}
+		.user{position: fixed; top: 50px; z-index: 24; font-family: arial; left: 1050px;}
 		.sair{position: fixed; top: 50px; z-index: 24; font-family: verdana; left: 1200px;}
-		.icon_sair{position: fixed; top: 10px; z-index: 24; left: 1200px; width:40px; height:30px;}
-		.icon_home{position: fixed; top: 20px; z-index: 24; left: 30px; width:40px; height:30px;}
-		.home{position: fixed; top: 55px; z-index: 24; left: 30px; width:40px; height:30px; font-family: verdana}
+		.icon_sair{position: fixed; top: 0px; z-index: 24; left: 1200px; width:50px; height:50px;}
+		.icon_home{position: fixed; top: 20px; z-index: 24; left: 230px; width:40px; height:30px;}
 		
+		
+		#titulo1{position: fixed; top: 5px; z-index: 24; left: 30px; width:270px; height:230px; font-family: font_titulo; font-size: 40px;}
+		#titulo2{position: fixed; top: 35px; z-index: 24; left: 130px; width:270px; height:230px; font-family: font_titulo; font-size: 40px;}
+
 		#divBusca{
 			  background-color:#E0EEEE;
 			  border:solid 2px #5F9EA0;
 			  border-radius:10px;
-			  width:300px;
+			  width:500px;
 			  height:32px;
 			  position: relative;
 			  left: 400px;
@@ -49,8 +59,8 @@
 			 
 			#btnBusca{
 			 position: relative;
-			 top:-32px;
-			 left: 190px;	
+			 top:0px;
+			 left: 196px;	
 			  border:none;
 			  float:left;
 			  height:32px;
@@ -120,9 +130,9 @@
 	?>
 	<a href="logoff.php"><img src="upload/logof.png" class='icon_sair'></a>
 	<a href="logoff.php" class='sair'>Sair</a>
-	<a href="home.php"><img src="upload/home_icon.png" class='icon_home'></a>
-	<a href="home.php" class='home'>Home</a>
 
+	<a href="home.php"><div id='titulo1'>falando em</div></a>
+	<a href="home.php"><div id='titulo2'>serie.com</div></a>
 	<div id="divBusca">
   <img src="imagens/botão/search3.png" alt="Buscar..." class='busc'/>
   <input type="text" id="txtBusca" placeholder="Buscar..."/>
